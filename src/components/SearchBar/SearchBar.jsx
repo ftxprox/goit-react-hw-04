@@ -8,7 +8,7 @@ export default function SearchBar({onSubmit}) {
     const initialValues = { query: '' };
     const handleSubmit = (values, { resetForm }) => {
         if (values.query.trim() === '') {
-            return toast.error("Please fill in the field");
+            return toast.error("Unable to search");
         }
         onSubmit(values.query);
         resetForm(); 

@@ -43,7 +43,7 @@ const App = () => {
           toast.success('You have reached the end of the results.');
         }
       } catch (error) {
-        setError("Something went wrong. Please try again later.");
+        setError(error)("Something went wrong. Please try again later.");
         toast.error("Something went wrong. Please try again later.");
       } finally {
         setLoading(false);

@@ -1,11 +1,20 @@
-import css from './LoadMoreBtn.module.css';
+import Modal from 'react-modal';
+import css from './ImageModal.module.css'
 
-function LoadMoreBtn({ onClick }) {
+Modal.setAppElement('#root');
+
+
+function ImageModal({ isOpen, onRequestClose, largeImageURL, alt }) {
   return (
-    <button className={css.loadMoreBtn} onClick={onClick}>
-      Load more
-    </button>
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onRequestClose}
+      className={css.modal}
+      overlayClassName={css.overlay}
+    >
+      <img src={largeImageURL} alt={alt} className={css.largeImage} />
+    </Modal>
   );
 }
 
-export default LoadMoreBtn;
+export default ImageModal;
