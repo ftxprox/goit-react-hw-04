@@ -1,9 +1,9 @@
-import css from './ImageCard.module.css'
+import s from './ImageCard.module.css'
 
     function ImageCard({ image, onClick}) {
   return (
-    <div className={css.imageCard} onClick={onClick}>
-      <img src={image.urls.small} alt={image.alt_description} className={css.image} />
+    <div className={s.imageCard} onClick={onClick}>
+      <img src={image.urls.small} alt={image.alt_description} className={s.image} />
     </div>
   );
 }

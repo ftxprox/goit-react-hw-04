@@ -1,5 +1,5 @@
 import Modal from 'react-modal';
-import css from './ImageModal.module.css'
+import s from './ImageModal.module.css'
 
 Modal.setAppElement('#root');
 
@@ -9,10 +9,10 @@ function ImageModal({ isOpen, onRequestClose, largeImageURL, alt }) {
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      className={css.modal}
-      overlayClassName={css.overlay}
+      className={s.modal}
+      overlayClassName={s.overlay}
     >
-      <img src={largeImageURL} alt={alt} className={css.largeImage} />
+      <img src={largeImageURL} alt={alt} className={s.largeImage} />
     </Modal>
   );
 }
